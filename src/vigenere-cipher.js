@@ -21,6 +21,9 @@ import { NotImplementedError } from '../extensions/index.js';
  */
 export default class VigenereCipheringMachine {
  encrypt(text, key) {
+    if (text === undefined || key === undefined) {
+      throw new Error('Incorrect arguments!');
+    }
     let i = 0,
       crypt;
     key = key.toUpperCase().replace(/[^A-Z]/g, '');
@@ -31,6 +34,9 @@ export default class VigenereCipheringMachine {
       });
   }
   decrypt(text, key) {
+    if (text === undefined || key === undefined) {
+      throw new Error('Incorrect arguments!');
+    }
     let i = 0;
     let crypt;
     key = key.toUpperCase().replace(/[^A-Z]/g, '');
