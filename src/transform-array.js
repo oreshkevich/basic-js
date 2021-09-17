@@ -16,7 +16,7 @@ import { NotImplementedError } from '../extensions/index.js';
 export default function transform(arr ) {
  let res = Array.isArray(arr);
   if (res !== true) {
-    throw new RangeError();
+   throw new RangeError("'arr' parameter must be an instance of the Array!");
   } else {
     let g = []
     for (let i = 0; i <= arr.length - 1; i++) {
