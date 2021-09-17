@@ -14,9 +14,9 @@ import { NotImplementedError } from '../extensions/index.js';
  * ]) => 3`
  *
  */
-export default function countCats(/* matrix */) {
+export default function countCats(matrix) {
   let counter = 0;
-  let arr1 = [].concat(...arr);
+  let arr1 = [].concat(...matrix);
   for (let elem of arr1) {
     if (elem == '^^') {
       counter++;
